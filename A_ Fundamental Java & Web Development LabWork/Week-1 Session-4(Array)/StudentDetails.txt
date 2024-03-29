@@ -1,0 +1,41 @@
+write a program to print the students details(stdid,stdname,stdmark) using array elements
+
+class Student {
+    int stdId;
+    String stdName;
+    double stdMarks;
+
+    // Parameterized constructor
+    Student(int id, String name, double marks) {
+        this.stdId = id;
+        this.stdName = name;
+        this.stdMarks = marks;
+    }
+}
+
+public class StudentDetails {
+
+    public static void main(String[] args) {
+        // Create an array of Student objects
+        Student[] students = new Student[3];
+
+        // Assign values to array elements
+        students[0] = new Student(101, "John", 85.5);
+        students[1] = new Student(102, "Alice", 92.0);
+        students[2] = new Student(103, "Bob", 78.5);
+
+        // Print student details
+        System.out.println("Student Details:");
+        for (Student student : students) {
+            printStudentDetails(student);
+        }
+    }
+
+    // Method to print student details
+    private static void printStudentDetails(Student student) {
+        System.out.println("Student ID: " + student.stdId);
+        System.out.println("Student Name: " + student.stdName);
+        System.out.println("Student Marks: " + student.stdMarks);
+        System.out.println("---------------");
+    }
+}

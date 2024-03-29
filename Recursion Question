@@ -1,0 +1,54 @@
+Q.1 Series to print 1 to 10
+
+public class Series {
+
+    public static void main(String[] args) {
+        // Calling  recursive method 
+    	System.out.println("Series from 1 to 10 ");
+        printNumbers(1, 10);
+    }
+
+   // Recursive method 
+    public static void printNumbers(int start, int end) {
+        if (start <= end) {
+            System.out.println(start);
+            
+            printNumbers(start + 1, end);
+        }
+    }
+}
+
+Q.2 Fibonacci series
+
+import java.util.Scanner;
+
+public class Fibonacci {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number till you want to print Fibonacci series: ");
+        int n = sc.nextInt(); 
+        System.out.println("Fibonacci series");
+        printFibonacciSeries(n, 0);
+    }
+
+    
+    // Recursive method 
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            // Recursive call 
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    // Recursive method 
+    public static void printFibonacciSeries(int n, int count) {
+        if (count <= n) {
+            System.out.print(fibonacci(count) + " ");
+            // Recursive call with the next term
+            printFibonacciSeries(n, count + 1);
+        }
+    }
+
+}

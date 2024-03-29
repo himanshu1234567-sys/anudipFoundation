@@ -1,0 +1,118 @@
+1.    What are the benefits of using Java programming language?
+      High level language
+      
+
+
+2.    Why is Java known as a platform independent language?
+Ans.  Platform Independent means that the java compiled code (byte code) can run on all OS. A program is written
+      in a language that is human readable language. It may contain word, phrases etc, which the machine does not 
+      understand, for the source code to be understand by the machine it need to be in language understand by the 
+      machine, typically a machine-level language, so here comes the role of compiler. The compiler convert the high-
+      level language into a format understand by the machines, therefore a compiler is a program that translate the
+      source code for another program from a programming language into executable code. 
+       
+      so, Java has JVM for these operation JVM does these all work so, we can simply say Java is a platform independent 
+      language because it has JVM 
+
+
+3.    What is the main() method in Java, explain its signature in detail.
+Ans.  In Java, the main() method is a special method , it is the starting point for a Java application. when we run the 
+      java program firstly compiler search for the main method, java program starts execution from the main method.
+      
+      It has some signatures are:
+      public -  Accsess modifier which shows that main method can be access from anywhere
+      static -
+      void   -  It is the return type which indicating that it doesn't return any value
+      main   -  It is the name of the method
+      string[args] -  args parameter is an array of strings
+
+
+4.    Write a Java program to print the addition of two numbers.
+Ans.  package assignment_2;
+
+      public class Addition {
+	
+           public static void main(String[] args) {
+    	
+    	   int a = 15;
+    	   int b = 82;
+    	   int sum = a+b;
+	
+           System.out.println("The sum of all are : " + sum);
+	}
+
+     }
+
+
+5.    Write a Java program to calculate the factorial of a number.
+Ans.  package assignment_2;
+
+      public class Factorial{  
+	 
+             public static void main(String args[]){  
+		  
+		  int i, factorial=1;  
+		  int number=5; 
+		  
+		  for(i=1; i<=number; i++){    
+			  factorial = factorial*i;    
+		  }    
+		  
+		  System.out.println("Factorial of "+number+" is: "+ factorial);    
+		 
+	      }  
+         } 
+
+
+
+PRIME FACTORIAL
+The prime factors of a number are all of the integers below that number that are
+divisible into the number as well as 1. For example, the prime factors of 12 are 1,2,3,4,6, and 12.
+
+
+
+do the Dry run of these  codes 
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10; // Change this value to adjust the number of terms
+
+        int a = 0, b = 1;
+        System.out.print("Fibonacci Series: ");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int sum = a + b;
+            a = b;
+            b = sum;
+        }
+    }
+}
+
+
+
+
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        int n = 50; // Change this value to adjust the range
+
+        System.out.println("Prime Numbers from 1 to " + n + ":");
+        for (int i = 2; i <= n; i++) {
+            boolean isPrime = true;
+
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+
+

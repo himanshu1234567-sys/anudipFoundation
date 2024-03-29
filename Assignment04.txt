@@ -1,0 +1,191 @@
+Find C
+Description
+• You are given a number c (take a number in int by yourself) Find the value of c , after doing the following operations-
+
+C is multiplied by 5
+20 is added in the new value
+5 is subtracted from the new
+of C.
+value of C.
+
+
+import java.util.Scanner;
+
+public class FindC {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of c: ");
+
+       
+        int c = scanner.nextInt();
+
+        c = c * 5;       
+        c = c + 20;      
+        c = c - 5;       
+
+       
+        System.out.println("The value of C after the operations: " + c);
+
+    }
+}
+
+
+ 
+
+Q2 do the dry run of this code 
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	 int n = 5; // Number of rows
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+	}
+}
+
+
+
+Q3  Write a Java program to print a right-angled triangle of numbers as follows:
+
+1
+12
+123
+1234
+12345
+
+public class RightAngleTriangle {
+    public static void main(String[] args) {
+        int rows = 5; 
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Q4  Write a Java program to print pattern :
+
+******
+*    *
+*    *
+******
+
+public class SpaceStar {
+    public static void main(String[] args) {
+        int rows = 4;
+        int cols = 6;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= cols; j++) {
+                if (i == 1 || i == rows || j == 1 || j == cols) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Q5   Write a Java program to print pattern :
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+public class HalfTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Q6  Write three Java program to print pattern :
+
+
+        *    
+      * *    
+    * * *    
+  * * * *   
+* * * * *   
+
+public class TopBottom {
+
+	 public static void main(String[] args) {
+		 int n = 5;
+
+	        for (int i = 1; i <= n; i++) {
+	            for (int j = 1; j <= n - i; j++) {
+	                System.out.print("  "); // Print spaces
+	            }
+	            for (int k = 1; k <= i; k++) {
+	                System.out.print("* "); // Print stars
+	            }
+	            System.out.println();
+	        }
+	    }
+	}
+
+Q7  write three java program to print pattern 
+
+* * * * *      
+  * * * *    
+    * * *   
+      * *    
+        *  
+
+public class BottomUp {
+
+	public static void main(String[] args) {
+		int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j < i; j++) {
+                System.out.print("  "); // Print spaces
+            }
+            for (int k = i; k <= n; k++) {
+                System.out.print("* "); // Print stars
+            }
+            System.out.println();
+        }
+    }
+}  
+
+
+
+
+
+
+

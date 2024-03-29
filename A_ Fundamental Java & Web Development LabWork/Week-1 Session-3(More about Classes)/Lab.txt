@@ -1,0 +1,44 @@
+● Write a Java program named Car 
+● The Car class should have the following attributes: make (String), model (String) , year (short) , and price(int) . 
+● The car class should have a constructor that takes all the attributes. 
+● Add a main method to instantiate car objects.
+● The program should allow the user to create and display objects of each Car Class.
+
+public class Car {
+
+	String make;
+	String model;
+	short year;
+	int price;
+	
+	public Car(String make, String model, short year, int price) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.price = price;
+	}
+	
+	public void display() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+        System.out.println("Price: $" + price);
+        System.out.println();
+    }
+
+	
+	public static void main(String[] args) {
+		
+		Car car1 = new Car("Toyota", "Camry", (short) 2020, 25000);
+        Car car2 = new Car("Honda", "Accord", (short) 2021, 28000);
+
+        
+        System.out.println("Details of Car 1:");
+        car1.display();
+
+        System.out.println("Details of Car 2:");
+        car2.display();
+	}
+	
+}

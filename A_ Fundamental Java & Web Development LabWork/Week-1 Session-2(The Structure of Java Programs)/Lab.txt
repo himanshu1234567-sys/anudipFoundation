@@ -1,0 +1,60 @@
+Assignment-1.
+
+● Create a class Student in Student.java then add member variables studentName, collegeName of type String 
+● Add a member variable studentID of type int. 
+● Make all the member variables as private.
+● Add a main method. And print a message “Successful”.
+● Compile the class 
+● Run the class (Follow Coding convention)
+
+public class Student {
+    // Private member variables
+    private String studentName;
+    private String collegeName;
+    private int studentID;
+
+    // Constructor
+    public Student(String studentName, String collegeName, int studentID) {
+        this.studentName = studentName;
+        this.collegeName = collegeName;
+        this.studentID = studentID;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        System.out.println("Successful");
+    }
+}
+
+
+
+Assignment-2. 
+
+● Create a new class Employee 
+● Add member variables: id and age of type int, name of type String and isPermanent of type boolean 
+● Now assign values 35.5 to age; See the error message.
+● How can you avoid this error? Correct the error by casting. 
+● Make all the members protected 
+● Add a main method to it. Print message “Successfully started”. 
+● Compile the class.
+
+public class Employee {
+    // Protected member variables
+    protected int id;
+    protected int age;
+    protected String name;
+    protected boolean isPermanent;
+
+    // Constructor
+    public Employee(int id, int age, String name, boolean isPermanent) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.isPermanent = isPermanent;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        System.out.println("Successfully started");
+    }
+}

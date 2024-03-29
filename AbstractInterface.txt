@@ -1,0 +1,70 @@
+1) Create an abstract class Shape with an abstract method calculateArea(). Implement two subclasses, Circle and Rectangle, which inherit from Shape and provide their own implementations of calculateArea(). Write a program to calculate and print the areas of a circle and a rectangle.
+
+abstract class Shape {
+
+	abstract void calculateArea();
+}
+
+class Circle extends Shape{
+
+	int r;
+	@Override
+	void calculateArea() {
+		System.out.println(3.14 * r * r);
+		
+	}
+	
+	// Constructor for Circle
+	public Circle(int r) {
+		super();
+		this.r = r;
+	}
+	
+}
+
+class Rectangle extends Shape{
+
+	int l, b;
+	@Override
+	void calculateArea() {
+		System.out.println(l * b);
+		
+	}
+	
+	// Constructor for Rectangle
+	public Rectangle(int l, int b) {
+		super();
+		this.l = l;
+		this.b = b;
+	}
+	
+}
+
+public class ShapeMain {
+	
+	public static void main(String[] args) {
+		
+		// Instantiate Circle
+		Circle c = new Circle(5);
+		System.out.println("Area of Circle: ");
+		c.calculateArea(); // Call area method for Circle
+		
+		// Instantiate Rectangle
+		Rectangle r = new Rectangle(4, 5);
+		System.out.println("Area of Rectangle: ");
+		r.calculateArea(); // Call area method for Rectangle
+		
+	}
+
+}
+
+2)  What is interface? How to support multiple inhertance in Java?
+    interface is a collection of abstract methods and constant fields, providing a way to achieve abstraction and define a contract for classes.
+
+To support multiple inheritance in Java, a class can implement multiple interfaces, allowing it to inherit abstract methods from multiple sources.
+Interfaces do not contain method implementations; instead, implementing classes provide concrete implementations for the declared methods.
+This approach avoids the complexities of multiple inheritance through class inheritance, which Java does not support.
+Interfaces facilitate code reusability, polymorphism, and the creation of modular and loosely coupled systems.
+
+
+

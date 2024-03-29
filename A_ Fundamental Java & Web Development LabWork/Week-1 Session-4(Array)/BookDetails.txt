@@ -1,0 +1,40 @@
+Write a  program to print the book details (book id,book name,price) using arrays of object
+
+class Book {
+    int bookId;
+    String bookName;
+    double price;
+
+    // Parameterized constructor
+    Book(int id, String name, double price) {
+        this.bookId = id;
+        this.bookName = name;
+        this.price = price;
+    }
+}
+public class BookDetails {
+
+    public static void main(String[] args) {
+        // Create an array of Book objects
+        Book[] books = new Book[3];
+
+        // Assign values to array elements
+        books[0] = new Book(1, "Java Programming", 29.99);
+        books[1] = new Book(2, "Data Structures", 39.99);
+        books[2] = new Book(3, "Algorithms", 49.99);
+
+        // Print book details
+        System.out.println("Book Details:");
+        for (Book book : books) {
+            printBookDetails(book);
+        }
+    }
+
+    // Method to print book details
+    private static void printBookDetails(Book book) {
+        System.out.println("Book ID: " + book.bookId);
+        System.out.println("Book Name: " + book.bookName);
+        System.out.println("Price: $" + book.price);
+        System.out.println("---------------");
+    }
+}

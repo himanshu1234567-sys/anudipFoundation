@@ -1,0 +1,56 @@
+Assignment-2. Write a Java program that allows the user to create a bank account andperform transactions such as deposit, withdrawal, and balance inquiry. Using a conditional operator (ternary operator ), display the message whether minimumbalanceis maintained or not. Steps: 
+● Create a class BankAccount 
+● Add three member variables: String accountHolderName , int accountNumber and int balance; 
+● Add a constructors using all three members 
+● Add getters and setters. 
+● Add method deposit (int), withdraw(int) 
+● Implement the methods by increasing or decreasing the balance 
+● In the main method create a bank account 
+● Withdraw money from this account and/or deposit into this account 
+● Get the balance 
+● Create a string variable “status” inside the main method 
+● Assign values to status as “Minimum Balance Maintained” if balance is aboveor equal to 5000. Otherwise values of status will be “Minimum Balance not Maintained”. Use conditional operator (ternary operator ) to assign the valuesof the status. 
+● Display the status.
+
+
+class BankAccount {
+    private String accountHolderName;
+    private int accountNumber;
+    private int balance;
+
+    public BankAccount(String accountHolderName, int accountNumber, int balance) {
+        this.accountHolderName = accountHolderName;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    public void deposit(int amount) {
+        balance += amount;
+    }
+
+    public void withdraw(int amount) {
+        balance = (balance >= amount) ? balance - amount : balance;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public String getStatus() {
+        return (balance >= 5000) ? "Minimum Balance Maintained" : "Minimum Balance not Maintained";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("John Doe", 123456, 6000);
+
+        account.withdraw(2000);
+        account.deposit(1000);
+
+        System.out.println("Current Balance: $" + account.getBalance());
+
+        String status = account.getStatus();
+        System.out.println("Status: " + status);
+    }
+}
